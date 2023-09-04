@@ -1,0 +1,20 @@
+// Criar um array de objetos produto que contenha dois atributos nome e preço.
+const produtos = [
+  { nome: 'Arroz', preco: 10.0 },
+  { nome: 'Feijão', preco: 15.0 },
+  { nome: 'Macarrão', preco: 20.0 },
+];
+// Para cada produto desse array aplicar um aumento de preço de 1.50 usando o método map.
+const produtosComAumento = produtos.map((produto) => {
+  return {
+    nome: produto.nome,
+    preco: produto.preco + 1.50,
+  };
+});
+// Para exibição pode criar um botão que chame a função e exiba o resultado no console.
+const botao = document.createElement('Clique');
+botao.innerHTML = 'Exibir produtos com aumento de preço';
+botao.addEventListener('click', () => {
+  console.log(produtosComAumento);
+});
+document.body.appendChild(botao);
